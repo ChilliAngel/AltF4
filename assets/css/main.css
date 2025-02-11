@@ -74,8 +74,8 @@ input, select, textarea {
 #header .logo {
     width: 20vw; /* Le logo prend 20% de la largeur de la fenêtre */
     height: 20vw; /* Maintient la forme circulaire avec la même hauteur */
-    max-width: 200px; /* Taille maximale sur les grands écrans */
-    max-height: 200px; /* Hauteur maximale sur les grands écrans */
+    max-width: 300px; /* Taille maximale sur les grands écrans */
+    max-height: 300px; /* Hauteur maximale sur les grands écrans */
     line-height: 20vw; /* Centrage vertical du contenu interne */
     border: solid 1px #ffffff;
     border-radius: 100%;
