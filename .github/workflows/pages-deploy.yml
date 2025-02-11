@@ -16,15 +16,15 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4  # Mise à jour vers la version 4
+        uses: actions/checkout@v4
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4  # Mise à jour vers la version 4
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3  # Mise à jour vers la version 3
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: .  # Dossier source (racine du dépôt)
+          path: ./  # Assure-toi que le chemin correspond bien aux fichiers que tu veux déployer
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v3  # Mise à jour vers la version 3
+        uses: actions/deploy-pages@v3
