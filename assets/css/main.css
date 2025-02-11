@@ -72,25 +72,53 @@ input, select, textarea {
 	appearance: none;
 }
 #header .logo {
-	width: 200px; /* Plus large pour s'adapter au logo */
-	height: 200px; /* Plus haut pour garder la forme circulaire */
-	line-height: 200px; /* Centrage vertical du contenu interne */
-	border: solid 1px #ffffff;
-	border-radius: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    width: 20vw; /* Le logo prend 20% de la largeur de la fenÃªtre */
+    height: 20vw; /* Maintient la forme circulaire avec la mÃªme hauteur */
+    max-width: 200px; /* Taille maximale sur les grands Ã©crans */
+    max-height: 200px; /* Hauteur maximale sur les grands Ã©crans */
+    line-height: 20vw; /* Centrage vertical du contenu interne */
+    border: solid 1px #ffffff;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out; /* Transition douce lors des changements de taille */
 }
+
 .custom-logo {
-	width: 180px;
-	height: auto;
-	display: block;
-	margin: 0 auto;
-	position: relative;
-	user-select: none; /* Désactive la sélection de l'image */
-	-webkit-user-drag: none; /* Empêche le glisser-déposer sur Safari */
-	pointer-events: none; /* Empêche les interactions avec la souris */
+    width: 90%; /* L'image prend 90% de l'espace du conteneur logo */
+    height: auto; /* Maintient les proportions de l'image */
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    user-select: none; /* DÃ©sactive la sÃ©lection de l'image */
+    -webkit-user-drag: none; /* EmpÃªche le glisser-dÃ©poser sur Safari */
+    pointer-events: none; /* EmpÃªche les interactions avec la souris */
+    transition: all 0.3s ease-in-out; /* Transition douce pour l'image aussi */
 }
+
+/* Adaptation pour les tablettes */
+@media screen and (max-width: 1024px) {
+    #header .logo {
+        width: 25vw; /* Le logo devient un peu plus grand en proportion */
+        height: 25vw;
+        max-width: 150px; /* Limite la taille maximale sur tablette */
+        max-height: 150px;
+        line-height: 25vw;
+    }
+}
+
+/* Adaptation pour les tÃ©lÃ©phones */
+@media screen and (max-width: 736px) {
+    #header .logo {
+        width: 30vw; /* Le logo s'agrandit en proportion sur les petits Ã©crans */
+        height: 30vw;
+        max-width: 100px; /* Taille maximale sur tÃ©lÃ©phone */
+        max-height: 100px;
+        line-height: 30vw;
+    }
+}
+
 #header nav.use-middle:after {
 	display: none !important;
 }
@@ -102,10 +130,10 @@ input, select, textarea {
 }
 
 	#header nav ul li:first-child {
-		border-left: none; /* Pas de bordure à gauche pour la première case */
+		border-left: none; /* Pas de bordure Ã  gauche pour la premiÃ¨re case */
 	}
 	#header nav ul li.portfolio-item {
-		border-right: 1px solid #ffffff; /* Rétablit la bordure droite de Portfolio */
+		border-right: 1px solid #ffffff; /* RÃ©tablit la bordure droite de Portfolio */
 	}
 
 .custom-container {
@@ -146,8 +174,8 @@ input, select, textarea {
 	background: none; /* Supprime le fond si tu utilises une image */
 	box-shadow: 0 0 15px rgb(0 0 0 / 8%);
 	border-radius: 25px;
-	overflow: hidden; /* Coupe les parties de l'image qui dépassent du cadre */
-	user-select: none; /* Désactive la sélection dans tout le conteneur */
+	overflow: hidden; /* Coupe les parties de l'image qui dÃ©passent du cadre */
+	user-select: none; /* DÃ©sactive la sÃ©lection dans tout le conteneur */
 	-webkit-user-drag: none;
 }
 
@@ -156,8 +184,8 @@ input, select, textarea {
 		height: 100%;
 		object-fit: cover;
 		border-radius: 25px;
-		user-select: none; /* Empêche la sélection de l'image */
-		-webkit-user-drag: none; /* Empêche le glissement sur Chrome/Safari */
+		user-select: none; /* EmpÃªche la sÃ©lection de l'image */
+		-webkit-user-drag: none; /* EmpÃªche le glissement sur Chrome/Safari */
 		pointer-events: auto; /* Autorise les clics sur l'image */
 	}
 
@@ -165,7 +193,7 @@ input, select, textarea {
 		display: block;
 		width: 100%;
 		height: 100%;
-		text-decoration: none; /* Retire le soulignement du lien si nécessaire */
+		text-decoration: none; /* Retire le soulignement du lien si nÃ©cessaire */
 	}
 
 
@@ -185,8 +213,8 @@ input, select, textarea {
 	margin: 0 5px;
 	cursor: pointer;
 	font-size: 1.5rem;
-	color: #e5e5e5; /* Texte en gris clair pour lisibilité */
-	background-color: #4b4b4b; /* Gris foncé pour les boutons */
+	color: #e5e5e5; /* Texte en gris clair pour lisibilitÃ© */
+	background-color: #4b4b4b; /* Gris foncÃ© pour les boutons */
 	border-radius: 50%;
 	width: 40px;
 	height: 40px;
@@ -201,10 +229,10 @@ input, select, textarea {
 		color: #ffffff; /* Texte blanc au survol */
 	}
 
-	/* Style pour l'élément actif */
+	/* Style pour l'Ã©lÃ©ment actif */
 	.menu-item.active {
 		background-color: #a8a29e; /* Gris chaud (taupe) pour le bouton actif */
-		color: #262626; /* Gris anthracite foncé pour le texte actif */
+		color: #262626; /* Gris anthracite foncÃ© pour le texte actif */
 		font-weight: bold;
 		font-style: italic;
 	}
@@ -882,15 +910,15 @@ input, select, textarea {
 		}
 .image.main {
 	height: 33.33%; /* Affiche uniquement 1/3 de la hauteur de l'image */
-	max-height: 200px; /* Définir une hauteur maximale si nécessaire */
-	overflow: hidden; /* Coupe tout ce qui dépasse du conteneur */
+	max-height: 200px; /* DÃ©finir une hauteur maximale si nÃ©cessaire */
+	overflow: hidden; /* Coupe tout ce qui dÃ©passe du conteneur */
 	display: block;
 	position: relative;
 }
 
 	.image.main img {
-		width: 100%; /* L'image garde sa largeur complète */
-		height: auto; /* Maintient les proportions sans déformation */
+		width: 100%; /* L'image garde sa largeur complÃ¨te */
+		height: auto; /* Maintient les proportions sans dÃ©formation */
 		display: block;
 	}
 	.image.main img {
@@ -898,12 +926,12 @@ input, select, textarea {
 		height: auto;
 		display: block;
 		position: relative;
-		top: -33%; /* Décale l'image vers le haut pour centrer la partie visible */
+		top: -33%; /* DÃ©cale l'image vers le haut pour centrer la partie visible */
 	}
 	.image.main img {
-		user-select: none; /* Empêche la sélection de l'image */
-		-webkit-user-drag: none; /* Empêche le glisser-déposer sur Safari */
-		pointer-events: none; /* Désactive les interactions avec la souris (clic droit, etc.) */
+		user-select: none; /* EmpÃªche la sÃ©lection de l'image */
+		-webkit-user-drag: none; /* EmpÃªche le glisser-dÃ©poser sur Safari */
+		pointer-events: none; /* DÃ©sactive les interactions avec la souris (clic droit, etc.) */
 	}
 
 		@media screen and (max-width: 480px) {
@@ -1863,7 +1891,7 @@ input, select, textarea {
 	}
 }
 
-/* Délais pour l'animation des différentes images */
+/* DÃ©lais pour l'animation des diffÃ©rentes images */
 img:nth-child(2) {
 	animation-delay: 3s;
 }
